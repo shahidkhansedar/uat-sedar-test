@@ -20,12 +20,12 @@ export default function MyDocument(props) {
       <Head>
         <link rel="preconnect" href="https://fonts.gstatic.com" />
 
-        <Script
+        {/* <Script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-20ZHK7ZNYB"
           strategy="beforeInteractive"
-        />
-        <Script id="google-analytics" strategy="beforeInteractive">
+        /> */}
+        {/* <Script id="google-analytics" strategy="beforeInteractive">
           {`
               window.dataLayer = window.dataLayer || [];
               function gtag(){window.dataLayer.push(arguments);}
@@ -36,11 +36,11 @@ export default function MyDocument(props) {
                 linker: { domains: [] } // 👈 disable _gl param
               });
             `}
-        </Script>
+        </Script> */}
         {/* <!-- End Google analytics --> */}
 
         {/* Facebook Pixel */}
-        <Script
+        {/* <Script
           id='Facebook-Pixel'
           strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
@@ -68,17 +68,17 @@ export default function MyDocument(props) {
               fbq("track", "PageView");
               `
           }}
-        />
-        <noscript>
+        /> */}
+        {/* <noscript>
           <img height="1" width="1" style={{ display: 'none' }}
             src="https://www.facebook.com/tr?id=418641216127391&ev=PageView&noscript=1" />
           <img height="1" width="1" style={{ display: 'none' }}
             src="https://www.facebook.com/tr?id=3863780167186594&ev=PageView&noscript=1" />
-        </noscript>
+        </noscript> */}
         {/* Facebook Pixel End */}
 
         {/* TikTok Analytics */}
-        <Script id="Tiktok-analytics" strategy="beforeInteractive">
+        {/* <Script id="Tiktok-analytics" strategy="beforeInteractive">
           {`
               !function (w, d, t) {
                 w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];
@@ -93,23 +93,23 @@ export default function MyDocument(props) {
                 ttq.load('CGM0OF3C77U84MT11HG0'); ttq.page();
               }(window, document, 'ttq');
             `}
-        </Script>
+        </Script> */}
         {/* TikTok Analytics End */}
 
         {/* Microsoft Clarity */}
-        <Script id="microsoft-clarity-tracking" strategy="beforeInteractive">
+        {/* <Script id="microsoft-clarity-tracking" strategy="beforeInteractive">
           {`(function(c,l,a,r,i,t,y){
               c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
               t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
               y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
             })(window,document, "clarity", "script", "gh3ywsd4k4");`}
-        </Script>
+        </Script> */}
         {/* Microsoft Clarity End */}
 
         {/* Google Tag Manager - Removed duplicate script, kept only body implementation */}
 
         {/* Yandex Metrika (gated to production host) */}
-        <Script id="yandex-metrika" type="text/javascript" strategy="afterInteractive">
+        {/* <Script id="yandex-metrika" type="text/javascript" strategy="afterInteractive">
           {`(function(){
               var isProd = typeof location !== 'undefined' && location.hostname === 'www.sedarglobal.com';
               if (!isProd) { return; }
@@ -126,7 +126,7 @@ export default function MyDocument(props) {
                 ecommerce:"dataLayer"
               });
             })();`}
-        </Script>
+        </Script> */}
         {/* <Script id="yandex-metrika" type="text/javascript" strategy="afterInteractive">
             {`(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
               m[i].l=1*new Date();
@@ -144,7 +144,7 @@ export default function MyDocument(props) {
         {/* Yandex End */}
 
         {/* Snap Pixel */}
-        <Script id="Snap-Pixel" type="text/javascript" strategy="afterInteractive">
+        {/* <Script id="Snap-Pixel" type="text/javascript" strategy="afterInteractive">
           {`(function(e,t,n){if(e.snaptr)return;var a=e.snaptr=function() {
                 a.handleRequest?a.handleRequest.apply(a,arguments):a.queue.push(arguments)};
                 a.queue=[];var s='script';r=t.createElement(s);r.async=!0; r.src=n;
@@ -154,10 +154,10 @@ export default function MyDocument(props) {
               snaptr('track', 'PAGE_VIEW');
               snaptr('init', '76a01b06-6d42-42c1-b913-83f3ac777a97', { 'user_email': '__INSERT_USER_EMAIL__' });
               snaptr('track', 'PAGE_VIEW');`}
-        </Script>
+        </Script> */}
         {/* Snap Pixel End */}
         {/* <Script async src="https://www.artfut.com/static/tagtag.min.js?campaign_code=98c772a893" /> */}
-        <ArtfutLoader />
+        {/* <ArtfutLoader /> */}
 
 
         <DocumentHeadTags {...props} />
@@ -167,17 +167,17 @@ export default function MyDocument(props) {
 
       <body>
         {/* GTM noscript */}
-        <noscript
+        {/* <noscript
           dangerouslySetInnerHTML={{
             __html: `
               <iframe src="https://www.googletagmanager.com/ns.html?id=${GTM_ID}"
               height="0" width="0" style="display:none;visibility:hidden"></iframe>
             `,
           }}
-        />
+        /> */}
 
         {/* ✅ GTM: must also load beforeInteractive */}
-        <Script
+        {/* <Script
           id="google-gtm"
           strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
@@ -193,17 +193,17 @@ export default function MyDocument(props) {
               })(window, document, 'script', 'dataLayer', '${GTM_ID}');
             `,
           }}
-        />
+        /> */}
 
         <Main />
         <NextScript />
 
         {/* ElevenLabs */}
-        <script
+        {/* <script
           src="https://unpkg.com/@elevenlabs/convai-widget-embed"
           async
           type="text/javascript"
-        ></script>
+        ></script> */}
       </body>
     </Html>
   );
